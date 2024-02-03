@@ -4,36 +4,36 @@ import NextJS from "./icons/NextJS.astro"
 import Tailwind from "./icons/Tailwind.astro"
 import Link from "./icons/Link.astro"
 import LinkButton from "./LinkButton.astro"
+import Code from "./icons/Code.astro"
 
 const TAGS = {
-  NEXT: {
-    name: "Next.js",
-    class: "bg-black text-white",
-    icon: NextJS,
-  },
   TAILWIND: {
     name: "Tailwind CSS",
     class: "bg-[#003159] text-white",
     icon: Tailwind,
   },
+  CODE: {
+    name: "Code",
+    class: "bg-[#003159] text-white",
+    icon: Code,
+  },
 }
 const PROJECTS = [
   {
-    title: "SVGL - A beautiful library with SVG logos",
+    title: "M&L - Departament",
     description:
-      "Biblioteca de logos SVG de las marcas más populares. +10k visitas al mes. +2K svgs descargados. Creado desde cero con Next.js, React y Tailwind CSS.",
-    link: "https://svgl.vercel.app/",
-    github: "https://github.com/pheralb/svgl",
-    image: "/projects/svgl.webp",
-    tags: [TAGS.NEXT, TAGS.TAILWIND],
+      "Web guía para huéspedes del departamento y sugerencias de restaurantes.",
+    link: "https://ml-departament.vercel.app/",
+    github: "https://github.com/Braydarak/ML-Departament",
+    image: "/projects/ml-dep.webp",
+    tags: [TAGS.TAILWIND],
   },
   {
     title: "AdventJS - Retos de programación con JavaScript y TypeScript",
-    description:
-      "Plataforma gratuita con retos de programación. Más de 1 millón de visitas en un mes. +50K retos completados. Creada desde cero con Next.js, React y Tailwind CSS.",
-    link: "https://adventjs.dev",
-    image: "/projects/adventjs.webp",
-    tags: [TAGS.NEXT, TAGS.TAILWIND],
+    description:"Famoso juego de Tic Tac Toe realizado especificamente para desktop con historial de movimientos",
+    link: "https://peaceful-curran-39cd62.netlify.app/",
+    image: "/projects/tic-tac-toe.webp",
+    tags: [TAGS.CODE],
   },
 ]
 ---
