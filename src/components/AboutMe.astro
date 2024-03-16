@@ -1,27 +1,38 @@
 ---
- const personalImageAlt = "Miguel Ángel"
+const personalImageAlt = "Brian Darakdjian";
+import { t } from "i18next";
 ---
 
-<article class="flex flex-col items-center justify-center gap-8 text-gray-700 dark:text-gray-300 md:flex-row">
+<article
+  class="flex flex-col items-center justify-center gap-8 text-gray-700 dark:text-gray-300 md:flex-row"
+>
   <div
     class="[&>p]:mb-4 [&>p>strong]:text-yellow-500 dark:[&>p>strong]:text-yellow-100 [&>p>strong]:font-normal [&>p>strong]:font-mono text-pretty order-2 md:order-1"
   >
     <p>
-      Me llamo Brian. Empecé en la
-      programación realizando un curso de Phyton en la UNSAM, en 2020. Actualmente soy <strong
-        >desarrollador web especializado en Front-End y frameworks como ReactJS</strong
-      >.
+      {t("bld_description")}
+      <strong> {t("bld_position")}</strong>.
     </p>
 
     <p>
-      Trabajé en Flydevs <strong
-        >empezando con mi primer empleo Tech en 2022. </strong
-      >Comencé trabajando con <strong> ReactJS</strong> y poco a poco fui aprendiendo <strong>TypeScript</strong> y distintas herramientas como <strong>Tailwind</strong>.
+      {t("fly_exp")}
+      <strong> {t("first_tech")}</strong>{t("started")}
+      <strong> ReactJS</strong>
+      {t("little")}
+      <strong> TypeScript</strong>
+      {t("tools")}<strong> Tailwind</strong>.
     </p>
   </div>
 
-  <img width="200" height="200" src="/brian.webp" alt={personalImageAlt} class="order-1 object-cover w-64 h-full p-1 bg-white md:order-2 lg:p-2 lg:w-64 aspect-square rounded-2xl dark:bg-yellow-500/5 ring-1 ring-white/20 " style="object-position: 50% 50%">
-
+  <img
+    width="200"
+    height="200"
+    src="/brian.webp"
+    alt={personalImageAlt}
+    loading="lazy"
+    class="order-1 object-cover w-64 h-full p-1 bg-white md:order-2 lg:p-2 lg:w-64 aspect-square rounded-2xl dark:bg-yellow-500/5 ring-1 ring-white/20"
+    style="object-position: 50% 50%"
+  />
 </article>
 
 <!-- FRASES PROHIBIDAS EN VUESTRO PORTFOLIO

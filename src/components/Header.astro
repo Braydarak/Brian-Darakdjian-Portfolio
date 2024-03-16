@@ -1,23 +1,25 @@
 ---
-import ThemeToggle from "./ThemeToggle.astro"
+import ThemeToggle from "./ThemeToggle.astro";
+import { t } from "i18next";
+import FlagSelector from "../components/FlagSelector.astro";
 
 const navItems = [
   {
-    title: "Experiencia",
-    label: "experiencia",
+    title: t("experience"),
+    label: t("experience_label"),
     url: "/#experiencia",
   },
   {
-    title: "Proyectos",
-    label: "proyectos",
+    title: t("projects"),
+    label: t("projects_label"),
     url: "/#proyectos",
   },
   {
-    title: "Sobre mí",
-    label: "sobre-mi",
+    title: t("about_me"),
+    label: t("about_me_label"),
     url: "/#sobre-mi",
   },
-]
+];
 ---
 
 <header
@@ -26,6 +28,9 @@ const navItems = [
   <nav
     class="flex px-3 text-sm font-medium rounded-full text-gray-600 dark:text-gray-200 justify-center items-center"
   >
+    <!-- <div class="px-2 py-2">
+      <FlagSelector />
+    </div> -->
     {
       navItems.map((link) => (
         <a
@@ -43,39 +48,39 @@ const navItems = [
 
 <script>
   document.addEventListener("astro:page-load", () => {
-    const sections = document.querySelectorAll("section")
-    const navItems = document.querySelectorAll("header nav a")
+    const sections = document.querySelectorAll("section");
+    const navItems = document.querySelectorAll("header nav a");
 
     const callback = (entries: any[]) => {
       entries.forEach((entry) => {
         if (entry.isIntersecting) {
           navItems.forEach((item) => {
             if (item.getAttribute("aria-label") == entry.target.id) {
-              item.classList.add("text-yellow-500")
+              item.classList.add("text-yellow-500");
             } else {
-              item.classList.remove("text-yellow-500")
+              item.classList.remove("text-yellow-500");
             }
-          })
+          });
         }
-      })
-    }
+      });
+    };
 
     const observer = new IntersectionObserver(callback, {
       root: null,
       rootMargin: "0px",
       threshold: 0.3,
-    })
+    });
 
     sections.forEach((section) => {
-      observer.observe(section)
-    })
+      observer.observe(section);
+    });
 
     document.onvisibilitychange = () => {
       if (document.visibilityState === "hidden") {
-        observer.disconnect()
+        observer.disconnect();
       }
-    }
-  })
+    };
+  });
 </script>
 
 <style>
