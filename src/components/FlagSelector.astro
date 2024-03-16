@@ -1,0 +1,20 @@
+---
+const url = Astro.url;
+
+---
+
+<button class="lang-button">Change</button>
+
+<script>
+  const redirect = true;
+  document.addEventListener("DOMContentLoaded", () => {
+    const button = document.querySelector(".lang-button");
+    button?.addEventListener("click", () => {
+      if ({ redirect }) {
+        return Astro.url + '/en';
+      } else {
+       return Astro.url;
+      }
+    });
+  });
+</script>

@@ -1,12 +1,13 @@
 ---
 import ExperienceItem from "./ExperienceItem.astro"
+import { t } from "i18next";
+
 const EXPERIENCIE = [
   {
     date: "2022 - 2024",
-    title: "Front-End Developer",
+    title: t('position'),
     company: "Flydevs",
-    description:
-      "Me especialicé en el desarrollo frontend con un enfoque en ReactJS, Tailwind, CSS, SASS, Redux y TypeScript. Destacando por la creación de interfaces dinámicas, diseños atractivos y una gestión eficiente del estado de la aplicación. Mi compromiso con la calidad y la mejora continua ha sido clave en el éxito de los proyectos. ¡Listo para nuevos desafíos y crecimiento continuo!",
+    description: t("flydevs_description"),
     link: "https://www.linkedin.com/in/briandarakdjian/",
   },
 ]
