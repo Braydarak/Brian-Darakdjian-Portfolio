@@ -1,7 +1,6 @@
 ---
 import ThemeToggle from "./ThemeToggle.astro";
 import { t } from "i18next";
-import FlagSelector from "../components/FlagSelector.astro";
 
 const navItems = [
   {
@@ -28,9 +27,6 @@ const navItems = [
   <nav
     class="flex px-3 text-sm font-medium rounded-full text-gray-600 dark:text-gray-200 justify-center items-center"
   >
-    <!-- <div class="px-2 py-2">
-      <FlagSelector />
-    </div> -->
     {
       navItems.map((link) => (
         <a
